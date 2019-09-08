@@ -1,0 +1,44 @@
+version: '3'
+services:
+  mysql:
+    build: ./mysql
+    container_name: "fluff_db"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "evG_NwT4"
+    volumes:
+      - ./mysql/db/:/var/lib/mysql:rw
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+  cmf:
+    build: ./php
+    container_name: "fluff_cmf"
+    ports:
+      - '80:80'
+      - '8081:8080'
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    environment:
+      SERVER_HOST: "localhost"
+      MYSQL_HOST: mysql
+      MYSQL_USER: "root"
+      MYSQL_PASS: "evG_NwT4"
+    volumes:
+      - ./app/:/var/www/html/:rw
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - '8080:80'

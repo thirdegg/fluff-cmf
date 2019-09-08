@@ -1,0 +1,106 @@
+#articles {
+
+    background-color: #fafafa;
+
+    .articles-title {
+        background-color: white;
+
+        .title-wrap {
+            padding-top: 85px;
+            padding-bottom: 20px;
+            margin: auto;
+            width: 1080px;
+
+            .page-name {
+                font-size: 24px;
+                margin-top: 20px;
+                font-weight: normal;
+                display: inline-block;
+                width: 100%;
+                margin-left: -4px;
+                text-align: left;
+            }
+
+
+        }
+    }
+
+
+    hr {
+        margin: 0;
+        border: 0;
+        height: 1px;
+        background-color: #eee;
+    }
+
+
+    .content-wrap {
+        padding-top: 20px;
+        padding-bottom: 80px;
+        margin: auto;
+        width: 1080px;
+
+        .articles-content {
+
+            .articles-list {
+
+                .articles-item {
+                    margin: 10px auto;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    background-color: white;
+                    border: 1px #eaeaea solid;
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+                    .article-img {
+                        vertical-align: top;
+                        width: 180px;
+                        height: 180px;
+                        margin: 20px;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        background-color: white;
+                        border: 1px solid #eaeaea;
+                        border-radius: 4px;
+                    }
+
+                    .article-preview {
+                        vertical-align: top;
+                        display: inline-block;
+                        width: 848px;
+                        overflow: hidden;
+                        position: relative;
+
+                        h2 {
+                            font-size: 30px;
+                            margin-top: 20px;
+                            text-align: left;
+                            margin-bottom: 12px;
+                        }
+
+                        p {
+                            margin-right: 60px;
+                            text-align: left;
+                            max-height: 96px;
+                            line-height: 19px;
+                            letter-spacing: -0.4px;
+                            overflow: hidden;
+                        }
+
+                        .button-link {
+                            text-align: right;
+                            display: block;
+                            margin-top: 20px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

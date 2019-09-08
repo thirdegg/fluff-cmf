@@ -1,0 +1,50 @@
+
+#groups {
+
+    .title {
+        vertical-align: top;
+        display: inline-block;
+        line-height: 50px;
+        width: 70%;
+        text-align: left;
+        margin-right: -4px;
+    }
+
+    .menu-buttons {
+        vertical-align: top;
+        width: 30%;
+        display: inline-block;
+        text-align: right;
+        line-height: 30px;
+        margin-right: -4px;
+    }
+    
+    .find {
+
+        display: block;
+        margin-bottom: 10px; 
+        height: 40px;
+        text-align: right;
+        
+        label {
+            width: 220px;
+            text-align: right;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 38px;
+            margin-right: 10px;
+            vertical-align: baseline;
+        }
+
+        input,select {
+            font-size: 16px;
+            width: 300px;
+            padding-left: 10px;
+            vertical-align: baseline;
+            display: inline-block;
+        }
+
+        
+    }
+    
+}

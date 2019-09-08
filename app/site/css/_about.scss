@@ -1,0 +1,230 @@
+#about {
+
+    background-color: #fafafa;
+
+
+    .about-title {
+        background-color: white;
+
+        .title-wrap {
+            padding-top: 85px;
+            padding-bottom: 20px;
+            margin: auto;
+            width: 1080px;
+
+            .page-name {
+                font-size: 24px;
+                margin-top: 20px;
+                font-weight: normal;
+                color: black;
+                display: inline-block;
+                width: 50%;
+                margin-left: -4px;
+                text-align: left;
+            }
+
+        }
+
+    }
+
+    hr {
+        margin: 0;
+        border: 0;
+        height: 1px;
+        background-color: #eee;
+    }
+
+    .content-wrap {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        margin: auto;
+        width: 1080px;
+
+        .about-blocks {
+            width: 100%;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            padding-top: 10px;
+            border-radius: 5px;
+
+            .way {
+                width: 90%;
+                border-radius: 5px;
+                margin: 20px auto;
+                background: #fff;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                border: 1px #eaeaea solid;
+
+                h2 {
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 20px;
+                    font-size: 1.3em;
+                }
+
+                p {
+                    padding: 0 80px 20px 80px;
+                    text-indent: 20px;
+                }
+            }
+
+            .mission {
+                width: 90%;
+                border-radius: 5px;
+                margin: 20px auto;
+                background: #fff;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                border: 1px #eaeaea solid;
+
+                h2 {
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 20px;
+                    font-size: 1.3em;
+                }
+
+                p {
+                    padding: 0 80px 20px 80px;
+                    text-indent: 20px;
+                }
+            }
+
+            .center-fix {
+                text-align: center;
+                width: 100%;
+            }
+
+            .approach {
+                width: 42%;
+                border-radius: 5px;
+                margin: 20px;
+                display: inline-block;
+                vertical-align: top;
+                background: #fff;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                border: 1px #eaeaea solid;
+
+                h2 {
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 20px 0 0 0;
+                    font-size: 1.3em;
+                }
+
+                img {
+                    margin: 10px;
+                }
+
+                p {
+                    padding: 0 40px 20px 40px;
+                    text-indent: 20px;
+                    text-align: left;
+                    border-radius: 5px;
+                    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            .production {
+                width: 42%;
+                border-radius: 5px;
+                margin: 20px;
+                display: inline-block;
+                vertical-align: top;
+                padding-bottom: 15px;
+                background: #fff;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                border: 1px #eaeaea solid;
+
+                h2 {
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 20px 0 0 0;
+                    font-size: 1.3em;
+                }
+
+                img {
+                    margin: 10px;
+                }
+
+                p {
+                    padding: 0 40px 20px 40px;
+                    text-indent: 20px;
+                    text-align: left;
+                    border-radius: 5px;
+                    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            .about-features {
+                text-align: center;
+                width: 100%;
+
+                div {
+                    height: 300px;
+                    width: 300px;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 15px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    position: relative;
+                    background: #fff;
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                    border: 1px #eaeaea solid;
+
+                    h1 {
+                        font-size: 20px;
+                        margin-top: 40px;
+                        margin-bottom: 20px;
+                    }
+
+                    h1::after {
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        width: 90px;
+                        background: #b9b9b9;
+                        margin: 20px auto;
+                    }
+
+                    p {
+                        padding: 0 10px;
+                    }
+                }
+
+                div::before {
+                    display: block;
+                    height: 20px;
+                    width: 120px;
+                    background: #ff2142;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    padding-top: 5px;
+                    position: absolute;
+                    top: 8px;
+                    left: -2px;
+                    transform: rotate(-7deg) skewX(-8deg);
+                    box-shadow: 3px 9px 25px -9px #000000;
+                }
+
+                .reliably::before {
+                    content: "Надёжно!";
+                }
+
+                .fast::before {
+                    content: "Быстро!";
+                }
+
+                .quality::before {
+                    content: "Качественно!";
+                }
+            }
+
+
+        }
+
+
+    }
+
+}

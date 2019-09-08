@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #444;
+    font-size: 14px;
+}
+
+table > tbody > tr:nth-child(odd) > td {
+    /*background: #fafafa;*/
+}
+
+table > thead > tr > td {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+    padding: 8px;
+}
+
+table > tbody > tr > td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}

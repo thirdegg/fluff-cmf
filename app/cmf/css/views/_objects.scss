@@ -1,0 +1,124 @@
+#edit-object-form, #new-object-form, #object-list, #objects {
+
+    .title {
+        vertical-align: top;
+        display: inline-block;
+        line-height: 50px;
+        width: 70%;
+        text-align: left;
+        margin-right: -4px;
+    }
+
+    .menu-buttons {
+        vertical-align: top;
+        width: 30%;
+        display: inline-block;
+        text-align: right;
+        line-height: 30px;
+        margin-right: -4px;
+    }
+
+    .offset {
+        margin: 20px;
+        text-align: right;
+
+        .selected {
+            text-decoration: underline;
+        }
+    }
+
+    .find {
+
+        display: block;
+        margin-bottom: 10px;
+        height: 40px;
+        text-align: right;
+
+        label {
+            width: 220px;
+            text-align: right;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 38px;
+            margin-right: 10px;
+            vertical-align: baseline;
+        }
+
+        input,select {
+            font-size: 16px;
+            width: 300px;
+            padding-left: 10px;
+            vertical-align: baseline;
+            display: inline-block;
+        }
+
+    }
+
+    #object-fields {
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .object-field {
+
+            display: block;
+            margin-bottom: 20px;
+
+            label {
+                width: 200px;
+                font-size: 18px;
+                line-height: 35px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 10px;
+                text-align: right;
+            }
+
+            .object-field-value {
+                display: inline-block;
+                vertical-align: top;
+                width: 500px;
+
+                .value-item {
+                    margin-bottom: 10px;
+                }
+
+                .array-add-value {
+                    height: 35px;
+                    line-height: 35px;
+                    display: block;
+                }
+
+                .array-remove-value {
+                    margin-left: 10px;
+                }
+
+                textarea {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+
+        }
+
+        .file-field {
+            width: 400px;
+            display: block;
+
+            input {
+                display: inline-block;
+                width: 200px
+            }
+
+            a {
+                @extend button;
+                display: inline-block;
+                width: 50px;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+}

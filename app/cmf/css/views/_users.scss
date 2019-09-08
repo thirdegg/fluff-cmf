@@ -1,0 +1,94 @@
+#users, #add-user, #edit-user, #add-group, #edit-group {
+
+    .title {
+        vertical-align: top;
+        display: inline-block;
+        line-height: 50px;
+        width: 70%;
+        text-align: left;
+        margin-right: -4px;
+    }
+
+    .menu-buttons {
+        vertical-align: top;
+        width: 30%;
+        display: inline-block;
+        text-align: right;
+        line-height: 30px;
+        margin-right: -4px;
+    }
+
+    .user-params {
+        .params-field {
+
+            display: block;
+            margin-bottom: 20px;
+
+            label {
+                width: 250px;
+                font-size: 18px;
+                line-height: 35px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 10px;
+                text-align: right;
+            }
+
+            .object-field-value {
+                display: inline-block;
+                vertical-align: top;
+                width: 500px;
+
+                .value-item {
+                    margin-bottom: 10px;
+                }
+
+                .array-add-value {
+                    height: 35px;
+                    line-height: 35px;
+                    display: block;
+                }
+
+                .array-remove-value {
+                    margin-left: 10px;
+                }
+
+                textarea {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+
+        }
+    }
+
+    .group-param {
+        display: block;
+        margin-bottom: 10px;
+        height: 40px;
+
+        > label {
+            width: 260px;
+            text-align: right;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 38px;
+            margin-right: 10px;
+            vertical-align: baseline;
+        }
+
+        input[type="checkbox"] {
+            text-align: left;
+        }
+
+        input[type="text"] {
+            font-size: 16px;
+            width: 300px;
+            padding-left: 10px;
+            vertical-align: baseline;
+            display: inline-block;
+        }
+
+    }
+    
+}

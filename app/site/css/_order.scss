@@ -1,0 +1,184 @@
+#order {
+    background-color: #fafafa;
+
+    .order-title {
+        background-color: white;
+
+        .title-wrap {
+            padding-top: 85px;
+            padding-bottom: 20px;
+            margin: auto;
+            width: 1080px;
+
+            .page-name {
+                font-size: 24px;
+                margin-top: 20px;
+                font-weight: normal;
+                color: black;
+                display: inline-block;
+                width: 50%;
+                margin-left: -4px;
+                text-align: left;
+            }
+
+            .search-catalog {
+                display: inline-block;
+                width: 50%;
+                margin-left: -4px;
+                text-align: right;
+
+                input {
+                    height: 38px;
+                    padding: 6px 10px;
+                    background-color: #fff;
+                    box-shadow: none;
+                    box-sizing: border-box;
+                    outline: none;
+                    width: 300px;
+                    border: 1px solid #eaeaea;
+                    text-align: right;
+                    border-radius: 4px;
+                }
+            }
+
+        }
+
+    }
+
+    hr {
+        margin: 0;
+        border: 0;
+        height: 1px;
+        background-color: #eee;
+    }
+
+    .content-wrap {
+
+        padding-top: 20px;
+        padding-bottom: 80px;
+        margin: auto;
+        width: 1080px;
+
+        .order-list {
+            width: 680px;
+            margin-right: -4px;
+            display: inline-block;
+            vertical-align: top;
+
+            .order-table {
+                width: 92%;
+                margin: 6px 4% 4%;
+
+                thead {
+                    tr {
+                        background: transparent;
+
+                        td {
+                            padding: 10px;
+                        }
+                    }
+                }
+
+                tbody {
+
+                    border: 1px solid #e0e0e0;
+                    border-radius: 4px;
+
+                    tr {
+                        &:nth-child(odd) {
+                            background: #efefef;
+                        }
+
+                        &:nth-child(even) {
+                            background: #fff;
+                        }
+
+                        td {
+                            padding: 10px;
+                        }
+                    }
+                }
+
+            }
+
+            .order-summ {
+                margin-top: 20px;
+                margin-bottom: 40px;
+                margin-right: 4%;
+                text-align: right;
+            }
+        }
+
+        .order-form-wrap {
+            width: 400px;
+            margin-right: -4px;
+            display: inline-block;
+            vertical-align: top;
+
+            .order-form {
+
+                display: block;
+                padding: 20px;
+
+
+                .form-item {
+
+                    margin-bottom: 20px;
+                    display: block;
+
+                    label {
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+
+                    input {
+                        display: block;
+                        height: 38px;
+                        padding: 6px 10px;
+                        background-color: #fff;
+                        box-shadow: none;
+                        box-sizing: border-box;
+                        outline: none;
+                        width: 300px;
+                        border: 1px solid #e0e0e0;
+                        text-align: left;
+                        border-radius: 4px;
+                    }
+
+                    textarea {
+                        display: block;
+                        padding: 6px 10px;
+                        background-color: #fff;
+                        box-shadow: none;
+                        box-sizing: border-box;
+                        outline: none;
+                        width: 300px;
+                        min-width: 300px;
+                        max-width: 300px;
+                        border: 1px solid #e0e0e0;
+                        text-align: left;
+                        border-radius: 4px;
+                    }
+
+                }
+
+                .button-primary {
+                    height: 40px;
+                    width: 300px;
+                    color: #000;
+                    background: transparent;
+                    border: solid 1px #000;
+                    text-align: center;
+                    padding: 10px 30px;
+                    font-size: 12px;
+                    font-weight: 100;
+                    line-height: 20px;
+                    text-decoration: none;
+                    margin-top: 10px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

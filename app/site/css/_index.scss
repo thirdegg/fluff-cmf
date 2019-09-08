@@ -1,0 +1,119 @@
+#index {
+    display: block;
+    height: 100vh;
+    position: relative;
+
+    .bg-image {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("../img/slider1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wrap {
+        width: 1080px;
+        margin: auto;
+        position: relative;
+
+        .main-info {
+            width: 450px;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            padding: 30px;
+            background-color: rgba(1, 81, 158, 0.95);
+            color: white;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+
+            h2 {
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            hr {
+                margin: 20px 0;
+                border: none;
+                height: 1px;
+                width: 100%;
+                background-color: white;
+            }
+
+            p {
+                margin-bottom: 10px;
+                line-height: 20px;
+
+                a {
+                    text-decoration: underline;
+                    color: white;
+                }
+            }
+
+            .main-logo {
+                display: inline-block;
+                margin: 10px;
+                vertical-align: text-top;
+            }
+
+            .main-company-name {
+                display: inline-block;
+                text-align: left;
+                margin-top: 20px;
+                vertical-align: top;
+
+                h2 {
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    letter-spacing: 0px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                h1 {
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    font-size: 82px;
+                    line-height: 74px;
+                    padding: 0;
+                    margin: 0;
+                    margin-left: -8px;
+                }
+            }
+
+            .catalog-link {
+                height: 40px;
+                width: 260px;
+                color: #FFFFFF;
+                background: transparent;
+                border: solid 1px white;
+                text-align: center;
+                padding: 10px 30px;
+                font-size: 12px;
+                font-weight: 100;
+                line-height: 38px;
+                text-decoration: none;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+
+            .catalog-link:hover {
+                color: #01519e;
+                background: #ffffff;
+            }
+
+
+        }
+
+    }
+
+}

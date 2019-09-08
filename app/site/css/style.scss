@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,300");
+
+@import "compass/css3";
+@import "compass/reset";
+
+$blue-color: #1EAEDB;
+$gray-color: #c0c0c0;
+
+@import "header";
+@import "index";
+@import "catalog";
+@import "product";
+@import "article";
+@import "articles";
+@import "about";
+@import "order";
+@import "contacts";
+@import "cart-dialog";
+
+html {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-weight: 400;
+    font-family: "Fira Sans", sans-serif;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    min-height: 80px;
+    width: 100%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(141deg, #01519e 0%, #0361b8 100%);
+    box-sizing: border-box;
+
+    .wrap {
+        width: 1080px;
+        margin: auto;
+        position: relative;
+
+        .copyright {
+            color: white;
+            font-size: 14px;
+            font-weight: 100;
+            float: left;
+            padding-top: 30px;
+        }
+
+        .footer-contacts {
+            float: right;
+            margin-top: 20px;
+            color: #ffffff;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}
+

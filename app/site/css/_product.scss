@@ -1,0 +1,155 @@
+#product {
+    background-color: #fafafa;
+
+    .catalog-title {
+        background-color: white;
+
+        .title-wrap {
+            padding-top: 85px;
+            padding-bottom: 20px;
+            margin: auto;
+            width: 1080px;
+
+            .page-name {
+                font-size: 24px;
+                margin-top: 20px;
+                font-weight: normal;
+                display: inline-block;
+                width: 100%;
+                margin-left: -4px;
+                text-align: left;
+            }
+
+        }
+    }
+
+
+    hr {
+        margin: 0;
+        border: 0;
+        height: 1px;
+        background-color: #eee;
+    }
+
+    .good-wrap {
+        width: 1080px;
+        margin: auto;
+        display: block;
+
+        .left-block {
+            width: 530px;
+            min-height: 660px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            vertical-align: top;
+            display: inline-block;
+
+            .image-block {
+
+                .label {
+                    height: 520px;
+                    width: 520px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    background-color: white;
+                    border: 1px solid #eaeaea;
+                    border-radius: 4px;
+                }
+
+                .mini-images {
+
+                    margin-top: 10px;
+
+                    .mini-image {
+                        display:inline-block;
+                        width: 120px;
+                        height: 120px;
+                        margin-right: 10px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        background-color: white;
+                        border: 1px solid #eaeaea;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+
+        .right-block {
+            vertical-align: top;
+            text-align: left;
+            width: 530px;
+            display: inline-block;
+
+            .name {
+                font-size: 30px;
+                margin-top: 25px;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: normal;
+                margin-bottom: 40px;
+            }
+
+            .color-block {
+                line-height: 20px;
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .material-block {
+                line-height: 20px;
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .price {
+                line-height:20px;
+                display: block;
+                margin-bottom: 20px;
+
+                .price-value {
+                    font-size: 26px;
+                    font-weight: lighter;
+                }
+            }
+
+            .buttons-block {
+                display: block;
+
+                .buy-button {
+                    display: inline-block;
+                }
+
+                .add-to-cart-button {
+                    display: inline-block;
+                }
+
+                .button {
+                    display: block;
+                    height: 38px;
+                    padding: 0 30px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 100;
+                    line-height: 38px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    background: linear-gradient(141deg, #01519e 0%, #0361b8 100%);
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    border: solid 1px white;
+                }
+            }
+
+        }
+
+    }
+}

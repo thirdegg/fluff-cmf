@@ -1,0 +1,831 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+input[type=button], input[type=submit], .button, button, #edit-object-form #object-fields .file-field a, #new-object-form #object-fields .file-field a, #object-list #object-fields .file-field a, #objects #object-fields .file-field a {
+  font-family: 'Rubik', sans-serif;
+  display: inline-block;
+  box-sizing: content-box;
+  float: none;
+  width: auto;
+  height: 27px;
+  line-height: 27px;
+  position: static;
+  cursor: pointer;
+  opacity: 1;
+  margin: 0;
+  padding: 3px 20px;
+  overflow: visible;
+  color: white;
+  text-overflow: clip;
+  color: #444;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(100%, #f1f1f1));
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+  border: 1px solid #dcdcdc;
+  font-size: 11px;
+  font-weight: lighter;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  border-radius: 2px; }
+
+input[type=button]:hover, input[type=submit]:hover, .button:hover, button:hover, #edit-object-form #object-fields .file-field a:hover, #new-object-form #object-fields .file-field a:hover, #object-list #object-fields .file-field a:hover, #objects #object-fields .file-field a:hover {
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2); }
+
+input[type=button]:active, input[type=submit]:active, .button:active, button:active, #edit-object-form #object-fields .file-field a:active, #new-object-form #object-fields .file-field a:active, #object-list #object-fields .file-field a:active, #objects #object-fields .file-field a:active {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(100%, #f1f1f1));
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+  box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.button-red {
+  background-color: #d14836;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkNGIzOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2QxNDgzNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dd4b39), color-stop(100%, #d14836));
+  background-image: -moz-linear-gradient(top, #dd4b39, #d14836);
+  background-image: -webkit-linear-gradient(top, #dd4b39, #d14836);
+  background-image: linear-gradient(to bottom, #dd4b39, #d14836);
+  border: none; }
+
+.button-red:hover {
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2); }
+
+.button-red:active {
+  background-color: #b0281a;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkNGIzOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IwMjgxYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dd4b39), color-stop(100%, #b0281a));
+  background-image: -moz-linear-gradient(top, #dd4b39, #b0281a);
+  background-image: -webkit-linear-gradient(top, #dd4b39, #b0281a);
+  background-image: linear-gradient(to bottom, #dd4b39, #b0281a);
+  box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.2); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #444;
+  font-size: 14px; }
+
+table > tbody > tr:nth-child(odd) > td {
+  /*background: #fafafa;*/ }
+
+table > thead > tr > td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+  padding: 8px; }
+
+table > tbody > tr > td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px; }
+
+input[type=text], input[type=password], input[type=number], select, textarea {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 10px;
+  vertical-align: top;
+  border-radius: 2px;
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  -moz-transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 0;
+  padding-left: 5px; }
+
+input[type=checkbox] {
+  text-align: left; }
+
+input[data-readonly] {
+  pointer-events: none; }
+  input[data-readonly]:focus {
+    outline: none;
+    pointer-events: none; }
+
+select {
+  padding: 9px; }
+
+/*select {
+    display: inline-block;
+    @include box-sizing(border-box);
+    padding: 4px 10px 4px 5px;
+    border: 1px solid #b7b7b7;
+    color: black;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252,252,252,1);
+    
+}*/
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=number]::placeholder {
+  color: #ccc; }
+
+input[type="file"] {
+  display: none; }
+
+.horisontal-label-input {
+  display: block;
+  margin-bottom: 10px;
+  height: 40px; }
+  .horisontal-label-input > label {
+    width: 220px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 38px;
+    margin-right: 10px;
+    vertical-align: baseline; }
+  .horisontal-label-input > input, .horisontal-label-input select {
+    font-size: 16px;
+    width: 300px;
+    padding-left: 10px;
+    vertical-align: baseline;
+    display: inline-block; }
+
+#options .title {
+  vertical-align: top;
+  display: inline-block;
+  line-height: 50px;
+  width: 70%;
+  text-align: left;
+  margin-right: -4px; }
+#options .menu-buttons {
+  vertical-align: top;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  line-height: 30px;
+  margin-right: -4px; }
+#options .find {
+  display: block;
+  margin-bottom: 10px;
+  height: 40px;
+  text-align: right; }
+  #options .find label {
+    width: 220px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 38px;
+    margin-right: 10px;
+    vertical-align: baseline; }
+  #options .find input, #options .find select {
+    font-size: 16px;
+    width: 300px;
+    padding-left: 10px;
+    vertical-align: baseline;
+    display: inline-block; }
+#options .add-param {
+  margin-left: 20px; }
+#options #params {
+  margin-top: 20px; }
+  #options #params .param-item {
+    display: block;
+    margin-bottom: 10px; }
+    #options #params .param-item label {
+      vertical-align: top;
+      width: 220px;
+      text-align: right;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 38px;
+      margin-right: 10px; }
+    #options #params .param-item input, #options #params .param-item select {
+      vertical-align: top;
+      font-size: 16px;
+      width: 300px;
+      padding-left: 10px;
+      display: inline-block; }
+    #options #params .param-item textarea {
+      font-size: 16px;
+      width: 300px;
+      height: 150px;
+      padding-left: 10px;
+      vertical-align: top;
+      display: inline-block; }
+    #options #params .param-item .remove-param {
+      padding-left: 10px;
+      vertical-align: top; }
+
+#groups .title {
+  vertical-align: top;
+  display: inline-block;
+  line-height: 50px;
+  width: 70%;
+  text-align: left;
+  margin-right: -4px; }
+#groups .menu-buttons {
+  vertical-align: top;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  line-height: 30px;
+  margin-right: -4px; }
+#groups .find {
+  display: block;
+  margin-bottom: 10px;
+  height: 40px;
+  text-align: right; }
+  #groups .find label {
+    width: 220px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 38px;
+    margin-right: 10px;
+    vertical-align: baseline; }
+  #groups .find input, #groups .find select {
+    font-size: 16px;
+    width: 300px;
+    padding-left: 10px;
+    vertical-align: baseline;
+    display: inline-block; }
+
+#users .title, #add-user .title, #edit-user .title, #add-group .title, #edit-group .title {
+  vertical-align: top;
+  display: inline-block;
+  line-height: 50px;
+  width: 70%;
+  text-align: left;
+  margin-right: -4px; }
+#users .menu-buttons, #add-user .menu-buttons, #edit-user .menu-buttons, #add-group .menu-buttons, #edit-group .menu-buttons {
+  vertical-align: top;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  line-height: 30px;
+  margin-right: -4px; }
+#users .user-params .params-field, #add-user .user-params .params-field, #edit-user .user-params .params-field, #add-group .user-params .params-field, #edit-group .user-params .params-field {
+  display: block;
+  margin-bottom: 20px; }
+  #users .user-params .params-field label, #add-user .user-params .params-field label, #edit-user .user-params .params-field label, #add-group .user-params .params-field label, #edit-group .user-params .params-field label {
+    width: 250px;
+    font-size: 18px;
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    text-align: right; }
+  #users .user-params .params-field .object-field-value, #add-user .user-params .params-field .object-field-value, #edit-user .user-params .params-field .object-field-value, #add-group .user-params .params-field .object-field-value, #edit-group .user-params .params-field .object-field-value {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px; }
+    #users .user-params .params-field .object-field-value .value-item, #add-user .user-params .params-field .object-field-value .value-item, #edit-user .user-params .params-field .object-field-value .value-item, #add-group .user-params .params-field .object-field-value .value-item, #edit-group .user-params .params-field .object-field-value .value-item {
+      margin-bottom: 10px; }
+    #users .user-params .params-field .object-field-value .array-add-value, #add-user .user-params .params-field .object-field-value .array-add-value, #edit-user .user-params .params-field .object-field-value .array-add-value, #add-group .user-params .params-field .object-field-value .array-add-value, #edit-group .user-params .params-field .object-field-value .array-add-value {
+      height: 35px;
+      line-height: 35px;
+      display: block; }
+    #users .user-params .params-field .object-field-value .array-remove-value, #add-user .user-params .params-field .object-field-value .array-remove-value, #edit-user .user-params .params-field .object-field-value .array-remove-value, #add-group .user-params .params-field .object-field-value .array-remove-value, #edit-group .user-params .params-field .object-field-value .array-remove-value {
+      margin-left: 10px; }
+    #users .user-params .params-field .object-field-value textarea, #add-user .user-params .params-field .object-field-value textarea, #edit-user .user-params .params-field .object-field-value textarea, #add-group .user-params .params-field .object-field-value textarea, #edit-group .user-params .params-field .object-field-value textarea {
+      width: 400px;
+      height: 300px; }
+#users .group-param, #add-user .group-param, #edit-user .group-param, #add-group .group-param, #edit-group .group-param {
+  display: block;
+  margin-bottom: 10px;
+  height: 40px; }
+  #users .group-param > label, #add-user .group-param > label, #edit-user .group-param > label, #add-group .group-param > label, #edit-group .group-param > label {
+    width: 260px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 38px;
+    margin-right: 10px;
+    vertical-align: baseline; }
+  #users .group-param input[type="checkbox"], #add-user .group-param input[type="checkbox"], #edit-user .group-param input[type="checkbox"], #add-group .group-param input[type="checkbox"], #edit-group .group-param input[type="checkbox"] {
+    text-align: left; }
+  #users .group-param input[type="text"], #add-user .group-param input[type="text"], #edit-user .group-param input[type="text"], #add-group .group-param input[type="text"], #edit-group .group-param input[type="text"] {
+    font-size: 16px;
+    width: 300px;
+    padding-left: 10px;
+    vertical-align: baseline;
+    display: inline-block; }
+
+#edit-object-form .title, #new-object-form .title, #object-list .title, #objects .title {
+  vertical-align: top;
+  display: inline-block;
+  line-height: 50px;
+  width: 70%;
+  text-align: left;
+  margin-right: -4px; }
+#edit-object-form .menu-buttons, #new-object-form .menu-buttons, #object-list .menu-buttons, #objects .menu-buttons {
+  vertical-align: top;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  line-height: 30px;
+  margin-right: -4px; }
+#edit-object-form .offset, #new-object-form .offset, #object-list .offset, #objects .offset {
+  margin: 20px;
+  text-align: right; }
+  #edit-object-form .offset .selected, #new-object-form .offset .selected, #object-list .offset .selected, #objects .offset .selected {
+    text-decoration: underline; }
+#edit-object-form .find, #new-object-form .find, #object-list .find, #objects .find {
+  display: block;
+  margin-bottom: 10px;
+  height: 40px;
+  text-align: right; }
+  #edit-object-form .find label, #new-object-form .find label, #object-list .find label, #objects .find label {
+    width: 220px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 38px;
+    margin-right: 10px;
+    vertical-align: baseline; }
+  #edit-object-form .find input, #edit-object-form .find select, #new-object-form .find input, #new-object-form .find select, #object-list .find input, #object-list .find select, #objects .find input, #objects .find select {
+    font-size: 16px;
+    width: 300px;
+    padding-left: 10px;
+    vertical-align: baseline;
+    display: inline-block; }
+#edit-object-form #object-fields, #new-object-form #object-fields, #object-list #object-fields, #objects #object-fields {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  #edit-object-form #object-fields .object-field, #new-object-form #object-fields .object-field, #object-list #object-fields .object-field, #objects #object-fields .object-field {
+    display: block;
+    margin-bottom: 20px; }
+    #edit-object-form #object-fields .object-field label, #new-object-form #object-fields .object-field label, #object-list #object-fields .object-field label, #objects #object-fields .object-field label {
+      width: 200px;
+      font-size: 18px;
+      line-height: 35px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+      text-align: right; }
+    #edit-object-form #object-fields .object-field .object-field-value, #new-object-form #object-fields .object-field .object-field-value, #object-list #object-fields .object-field .object-field-value, #objects #object-fields .object-field .object-field-value {
+      display: inline-block;
+      vertical-align: top;
+      width: 500px; }
+      #edit-object-form #object-fields .object-field .object-field-value .value-item, #new-object-form #object-fields .object-field .object-field-value .value-item, #object-list #object-fields .object-field .object-field-value .value-item, #objects #object-fields .object-field .object-field-value .value-item {
+        margin-bottom: 10px; }
+      #edit-object-form #object-fields .object-field .object-field-value .array-add-value, #new-object-form #object-fields .object-field .object-field-value .array-add-value, #object-list #object-fields .object-field .object-field-value .array-add-value, #objects #object-fields .object-field .object-field-value .array-add-value {
+        height: 35px;
+        line-height: 35px;
+        display: block; }
+      #edit-object-form #object-fields .object-field .object-field-value .array-remove-value, #new-object-form #object-fields .object-field .object-field-value .array-remove-value, #object-list #object-fields .object-field .object-field-value .array-remove-value, #objects #object-fields .object-field .object-field-value .array-remove-value {
+        margin-left: 10px; }
+      #edit-object-form #object-fields .object-field .object-field-value textarea, #new-object-form #object-fields .object-field .object-field-value textarea, #object-list #object-fields .object-field .object-field-value textarea, #objects #object-fields .object-field .object-field-value textarea {
+        width: 400px;
+        height: 300px; }
+  #edit-object-form #object-fields .file-field, #new-object-form #object-fields .file-field, #object-list #object-fields .file-field, #objects #object-fields .file-field {
+    width: 400px;
+    display: block; }
+    #edit-object-form #object-fields .file-field input, #new-object-form #object-fields .file-field input, #object-list #object-fields .file-field input, #objects #object-fields .file-field input {
+      display: inline-block;
+      width: 200px; }
+    #edit-object-form #object-fields .file-field a, #new-object-form #object-fields .file-field a, #object-list #object-fields .file-field a, #objects #object-fields .file-field a {
+      display: inline-block;
+      width: 50px;
+      text-align: center; }
+
+#edit-file #head-menu {
+  width: 100%;
+  text-align: right; }
+
+#files .file-list {
+  width: 100%;
+  border-collapse: collapse;
+  color: #444;
+  font-size: 14px; }
+  #files .file-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px; }
+    #files .file-list li .icon {
+      display: inline-block;
+      width: 20px; }
+    #files .file-list li .name {
+      display: inline-block;
+      width: 300px; }
+    #files .file-list li .type {
+      display: inline-block;
+      width: 300px; }
+
+#files-popup {
+  padding: 15px; }
+  #files-popup .find {
+    text-align: right; }
+
+#upload-file .title {
+  vertical-align: top;
+  display: inline-block;
+  line-height: 50px;
+  width: 70%;
+  text-align: left;
+  margin-right: -4px; }
+#upload-file .menu-buttons {
+  vertical-align: top;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  line-height: 30px;
+  margin-right: -4px; }
+#upload-file #files-list .file-item {
+  border-bottom: 1px solid #ddd;
+  padding: 8px; }
+
+#pages .title {
+  vertical-align: top;
+  display: inline-block;
+  line-height: 50px;
+  width: 70%;
+  text-align: left;
+  margin-right: -4px; }
+#pages .menu-buttons {
+  vertical-align: top;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  line-height: 30px;
+  margin-right: -4px; }
+
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: #fff;
+  color: #444; }
+
+a {
+  text-decoration: none;
+  color: #555; }
+
+hr {
+  border: none;
+  height: 1px;
+  width: 99%;
+  background-color: #ddd; }
+
+h1 {
+  font-size: 22px; }
+
+h2 {
+  font-size: 20px; }
+
+h3 {
+  font-size: 18px; }
+
+table tr td a {
+  display: inline-block;
+  height: 100%; }
+
+#login {
+  width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ebebeb;
+  background: #fafafa;
+  border-radius: 2px;
+  padding-bottom: 40px; }
+  #login #logo-block {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center; }
+    #login #logo-block #logo-img {
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: -140px; }
+    #login #logo-block #logo-title {
+      display: inline-block;
+      font-size: 36px;
+      text-align: center;
+      line-height: 60px;
+      margin-left: 20px;
+      vertical-align: top; }
+  #login form .horisontal-label-input label {
+    width: 120px; }
+  #login input[type=submit] {
+    margin: auto;
+    display: block;
+    margin-left: 132px;
+    margin-top: 20px; }
+  #login .error-message {
+    color: red;
+    margin-left: 132px;
+    padding-top: 10px;
+    display: block; }
+
+#template {
+  display: none; }
+
+#header {
+  background: #fafafa;
+  height: 80px;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  position: relative;
+  /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/ }
+  #header #logo {
+    line-height: 80px;
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 20px;
+    vertical-align: top; }
+    #header #logo a img {
+      display: inline-block;
+      margin-top: 15px;
+      margin-right: 0px;
+      vertical-align: top; }
+    #header #logo a #logo-title {
+      display: inline-block;
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
+      color: #000;
+      vertical-align: top; }
+  #header #user {
+    line-height: 80px;
+    display: inline-block;
+    padding-right: 20px;
+    position: absolute;
+    vertical-align: top;
+    right: 0px; }
+    #header #user a {
+      display: block;
+      float: right;
+      margin-right: 20px;
+      font-size: 12px;
+      color: #aaa; }
+
+#nav {
+  border-bottom: 1px solid #ebebeb;
+  background: #fafafa; }
+  #nav ul {
+    max-width: 1080px;
+    width: 100%;
+    margin-left: 100px;
+    z-index: 200; }
+    #nav ul .item {
+      display: inline-block;
+      position: relative;
+      border-bottom: solid 3px transparent; }
+      #nav ul .item a {
+        height: 40px;
+        line-height: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: block;
+        font-size: 12px;
+        color: #777;
+        text-transform: uppercase; }
+      #nav ul .item ul {
+        margin-top: 3px;
+        margin-left: 0px;
+        position: absolute;
+        display: none;
+        width: 100%;
+        /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+        border-bottom: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        border-right: 1px solid #ebebeb; }
+    #nav ul .selected {
+      border-bottom: solid 3px #4285f4; }
+      #nav ul .selected a {
+        color: #4285f4; }
+    #nav ul .sub-item {
+      width: 100%; }
+      #nav ul .sub-item a {
+        height: 40px;
+        line-height: 40px;
+        margin: auto;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        color: #777;
+        background-color: #fafafa;
+        text-transform: uppercase; }
+    #nav ul .item:hover > ul {
+      display: block; }
+    #nav ul .sub-item:hover > a {
+      background-color: #ebebeb; }
+    #nav ul .fa {
+      font-size: 16px;
+      margin-right: 5px; }
+
+#main #content {
+  vertical-align: top;
+  height: 100%;
+  padding: 20px;
+  display: inline-block;
+  margin-left: 100px;
+  max-width: 1080px;
+  width: 100%; }
+
+#new-template-form #template-label {
+  background-color: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  position: relative; }
+  #new-template-form #template-label #template-name {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #new-template-form #template-label .template-rights, #new-template-form #template-label .template-fields {
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+  #new-template-form #template-label #button-save {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+#new-template-form .template-fields {
+  margin-top: 20px; }
+
+.template-field {
+  background-color: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  padding-bottom: 10px; }
+  .template-field .field-label {
+    display: block;
+    width: 100%;
+    position: relative; }
+    .template-field .field-label .field-name, .template-field .field-label .field-type, .template-field .field-label .outher-params {
+      display: inline-block;
+      vertical-align: top;
+      margin: 20px 20px 10px 20px; }
+      .template-field .field-label .field-name label, .template-field .field-label .field-type label, .template-field .field-label .outher-params label {
+        margin-bottom: 10px;
+        display: block; }
+      .template-field .field-label .field-name input, .template-field .field-label .field-type input, .template-field .field-label .outher-params input {
+        display: block; }
+    .template-field .field-label .outher-params {
+      display: inline-block; }
+    .template-field .field-label .visible {
+      display: inline-block !important; }
+    .template-field .field-label .dropdown-list {
+      position: relative;
+      z-index: 100; }
+      .template-field .field-label .dropdown-list .list-open {
+        position: absolute;
+        z-index: 100;
+        right: 0;
+        top: 0; }
+      .template-field .field-label .dropdown-list .list-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 100; }
+      .template-field .field-label .dropdown-list label {
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1; }
+      .template-field .field-label .dropdown-list .dropdown-input {
+        position: relative;
+        z-index: 1; }
+        .template-field .field-label .dropdown-list .dropdown-input .add-value {
+          right: 10px;
+          top: 10px;
+          position: absolute; }
+      .template-field .field-label .dropdown-list .dropdown-values {
+        background-color: #fafafa;
+        outline: 1px solid #ebebeb;
+        position: absolute;
+        display: none;
+        top: -10px;
+        padding-bottom: 10px;
+        padding-top: 70px;
+        left: -10px;
+        right: -10px; }
+        .template-field .field-label .dropdown-list .dropdown-values .dropdown-value {
+          position: relative; }
+          .template-field .field-label .dropdown-list .dropdown-values .dropdown-value input {
+            width: 90%;
+            margin: 10px auto;
+            display: block; }
+          .template-field .field-label .dropdown-list .dropdown-values .dropdown-value .remove-value {
+            right: 14px;
+            top: 10px;
+            position: absolute; }
+    .template-field .field-label .visible-list {
+      z-index: 101; }
+      .template-field .field-label .visible-list .dropdown-values {
+        display: block !important; }
+    .template-field .field-label .remove-template-field {
+      position: absolute;
+      top: 10px;
+      display: none;
+      right: 10px; }
+    .template-field .field-label .up-template-field {
+      position: absolute;
+      top: 40px;
+      display: none;
+      right: 10px; }
+    .template-field .field-label .down-template-field {
+      position: absolute;
+      top: 60px;
+      display: none;
+      right: 10px; }
+  .template-field .field-settings {
+    display: block;
+    width: 100%; }
+    .template-field .field-settings .setting {
+      margin: 10px 20px 10px 20px;
+      display: inline-block;
+      vertical-align: top; }
+
+.template-field:hover .remove-template-field {
+  display: block; }
+.template-field:hover .up-template-field {
+  display: block; }
+.template-field:hover .down-template-field {
+  display: block; }
+
+.tabs {
+  display: block; }
+  .tabs .tab-link .tab {
+    display: inline-block;
+    padding: 15px;
+    border-bottom: solid 3px transparent; }
+  .tabs .tab-link .tab-selected {
+    border-bottom: solid 3px #4285f4; }
+
+#image-preview {
+  height: 300px;
+  width: 300px;
+  margin-left: -150px;
+  position: absolute;
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  outline: 1px solid #ddd;
+  background-repeat: no-repeat; }
+
+#object-preview {
+  width: 300px;
+  margin-left: -150px;
+  position: absolute;
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  outline: 1px solid #ddd;
+  background-repeat: no-repeat; }
+  #object-preview #object-table-preview {
+    width: 100%; }
+    #object-preview #object-table-preview tr td {
+      text-overflow: ellipsis;
+      padding: 10px; }
+
+/*# sourceMappingURL=style.css.map */
