@@ -27,7 +27,7 @@ abstract class TemplateField {
 
     static function getById($id) {
         $result = DataBase::getValueByPidAndParam($id, "type");
-        if (sizeof($result)==0) return null;
+        if (!$result) return null;
         return $result::getById($id);
     }
     

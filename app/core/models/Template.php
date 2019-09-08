@@ -70,7 +70,7 @@ class Template {
     
     public static function getById($id) {
         $result = DataBase::getAllByPid($id);
-        if (sizeof($result)==0) return null;
+        if (!$result || sizeof($result)==0) return null;
         $template = new Template();
         $template->id = $id;
         foreach ($result as $item) {
@@ -88,14 +88,14 @@ class Template {
     
     public static function getByName($name) {
         $result = DataBase::getPidByChildAndParentParamValue("model", "template", "name", $name)[0];
-        if (sizeof($result)==0) return null;
+        if (!$result || sizeof($result)==0) return null;
         return Template::getById($result);
     }
 
     
     public static function getAllTemplates($offset=0,$limit=15) {
         $result = DataBase::getIdsByParamValue("model","template",$offset,$limit);
-        if (sizeof($result)==0) return array();
+        if (!$result || sizeof($result)==0) return array();
         $templates = array();
         foreach ($result as $mod) {
             $template = Template::getById($mod);

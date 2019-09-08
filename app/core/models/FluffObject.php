@@ -58,7 +58,7 @@ class FluffObject implements ArrayAccess  {
 
     public function isUniqueValue($param,$value) {
         $result = DataBase::getPidByChildAndParentPidParamValue("model", "object", $param, $value,$this->template);
-        if (sizeof($result)==0) return true;
+        if (!$result || sizeof($result)==0) return true;
         foreach ($result as $mod) {
             if ($mod!=$this->getId()) return false;
         }
@@ -78,7 +78,7 @@ class FluffObject implements ArrayAccess  {
 
         $result = DataBase::getIdsByParamValue("model", "object", $offset, $size, $template);
 
-        if (sizeof($result)==0) return array();
+        if (!$result || sizeof($result)==0) return array();
         $objects = array();
         foreach ($result as $mod) {
             $object = FluffObject::getById($template, $mod);
